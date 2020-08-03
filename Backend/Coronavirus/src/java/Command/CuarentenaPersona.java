@@ -18,11 +18,15 @@ public class CuarentenaPersona implements Command{
     }
 
     @Override
-    public void execute() {
-        estadistica.fotoRepresenta();
-        estadistica.primerHospital();
-        estadistica.segundoHospital();
-        estadistica.tercerHospital();
+    public String execute() {
+        String text = estadistica.primerHospital() + estadistica.segundoHospital() + estadistica.tercerHospital();   
+        return text;
+    }
+    
+    @Override
+    public String executePicture() {
+        String text = estadistica.fotoRepresenta();
+        return text;
     }
     
             

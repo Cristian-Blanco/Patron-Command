@@ -18,12 +18,15 @@ public class MostrarSectores implements Command{
     }
 
     @Override
-    public void execute() {
-        estadistica.fotoRepresenta();
-        estadistica.primerSectorInfectado();
-        estadistica.segundoSectorInfectado();
-        estadistica.tercerSectorInfectado();
+    public String execute() {
+        String text = estadistica.primerSectorInfectado()+ estadistica.segundoSectorInfectado() + estadistica.tercerSectorInfectado();
+        return text;
     }
     
+    @Override
+    public String executePicture() {
+        String text = estadistica.fotoRepresenta();
+        return text;
+    }
     
 }

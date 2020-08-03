@@ -10,5 +10,6 @@ package Command;
  * @author Cristian
  */
 public interface Command {
-    public void execute();
+    public String execute();
+    public String executePicture();
 }

@@ -17,8 +17,12 @@ public class Invoker {
         this.command = command;
     }
     
-    public void correr(){
-        command.execute();
+    public String correr(){
+        return command.execute();
+    }
+    
+    public String runPicture(){
+        return command.executePicture();
     }
     
 }

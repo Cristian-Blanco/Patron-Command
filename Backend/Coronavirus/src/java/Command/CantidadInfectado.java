@@ -19,11 +19,16 @@ public class CantidadInfectado implements Command{
     }
 
     @Override
-    public void execute() {
-        estadistica.fotoRepresenta();
-        estadistica.infectadoConfirmado();
-        estadistica.infectadoMuerto();
-        estadistica.infectadoRecuperado();
+    public String execute(){
+        //estadistica.fotoRepresenta();
+        String text = estadistica.infectadoConfirmado() + estadistica.infectadoMuerto() + estadistica.infectadoRecuperado();
+        return text;
+    }
+
+    @Override
+    public String executePicture() {
+        String text = estadistica.fotoRepresenta();
+        return text;
     }
     
     
